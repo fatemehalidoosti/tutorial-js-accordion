@@ -4,8 +4,8 @@
 	<link href="css/jsaccordion.css" rel="stylesheet">
 	<script src="./js/jsaccordion.js"></script>
 </head>
-<body>
-<div class="container">
+<body id="body">
+<div class="container" id="jsac-container">
 	<ul class="list">
 		<li class="list-item collapsed">
 			<div class="header">
@@ -77,5 +77,10 @@
 		</li>
 	</ul>
 </div>
+<script>
+	var f =new JSAccordion("#jsac-container");
+	f.init();
+
+</script>
 </body>
 </html>

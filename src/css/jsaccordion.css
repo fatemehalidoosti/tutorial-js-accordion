@@ -1,0 +1,15 @@
+li .header{
+    background: #addcb8;
+    width: 200px;
+    height: 20px;
+    border-radius: 2px;
+}
+li .body{
+    width: 200px;
+    height: 200px;
+    border-radius: 2px;
+    background: #8dcd9c;
+}
+li {
+    list-style: none;
+}
