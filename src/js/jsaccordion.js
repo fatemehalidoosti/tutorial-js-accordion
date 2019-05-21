@@ -6,25 +6,34 @@ function JSAccordion(elementOrSelector) {
     this.init = function() {
 
         var ulItem, liItem;
-        ulItem= this.targetElement.querySelector("ul");
-        liItem=this.targetElement.querySelectorAll("li");
+        ulItem = this.targetElement.querySelector("ul");
+        liItem =this.targetElement.querySelectorAll("li");
 
         ulItem.classList.add("jsac-list");
         liItem.forEach(function (element)  {
-            if(element.classList.contains("list-item")){
-                element.classList.add("jsac-list-item")
-            }
-            var hdItem= element.querySelector("div.header");
-            if (hdItem.classList.contains("header")){
-                hdItem.classList.add("jsac-header")
-            }
-            var bodyItem= element.querySelector("div.body");
-            if (bodyItem.classList.contains("body")){
-                bodyItem.classList.add("jsac-body")
+                element.classList.add("jsac-list-item");
+
+            var hdItem = element.querySelector("div.header");
+                hdItem.classList.add("jsac-header");
+
+            var bodyItem = element.querySelector("div.body")
+                bodyItem.classList.add("jsac-body");
+            hdItem.addEventListener("click",exchange);
+
+            function exchange() {
+
+                if(this.parentNode.classList.contains("expanded")){
+                    this.parentNode.classList.replace("expanded","collapsed");
+                }else {
+                    this.parentNode.classList.replace("collapsed","expanded")
+                }
+
+
+
+
             }
 
-        })
-
+    });
     };
 
     //  start construction operations

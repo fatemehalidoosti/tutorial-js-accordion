@@ -1,0 +1,26 @@
+li .header{
+    background: #addcb8;
+    width: 100%;
+    height: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+li .body{
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    background: #8dcd9c;
+}
+li {
+    list-style: none;
+}
+p{
+    margin: 0 !important;
+}
+
+.collapsed .body{
+    display: block;
+}
+.expanded .body{
+    display: none;
+}
